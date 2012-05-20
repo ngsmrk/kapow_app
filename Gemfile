@@ -27,3 +27,15 @@ gem 'heroku'
 gem 'omniauth'
 gem 'omniauth-twitter'
 
+group :test do
+	gem 'cucumber'
+	gem 'cucumber-rails'
+	gem 'database_cleaner'
+	gem 'simplecov'
+	gem 'rspec-rails'
+	gem 'autotest-rails'
+	gem 'factory_girl_rails'
+	gem 'faker'
+	gem 'vcr'
+end
+
