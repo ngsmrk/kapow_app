@@ -23,3 +23,7 @@ gem 'jquery-rails'
 gem 'thin'
 
 gem 'heroku'
+
+gem 'omniauth'
+gem 'omniauth-twitter'
+
