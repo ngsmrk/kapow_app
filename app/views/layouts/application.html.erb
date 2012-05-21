@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kapow</title>
+  <title>Kapow!</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<%= render :partial => "shared/flash", :locals => {:flash => flash } %>
 
 <%= yield %>
 

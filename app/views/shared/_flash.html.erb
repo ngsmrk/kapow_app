@@ -1,0 +1,7 @@
+<% if flash.count > 0 %>
+	<div class="flash-container alert alert-info">
+    	<% flash.each do |name, msg| %>
+      		<%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+    		<% end %>		
+	</div>
+<% end %>
