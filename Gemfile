@@ -24,10 +24,6 @@ gem 'thin'
 
 gem 'heroku'
 
-gem 'devise'
-gem 'omniauth'
-gem 'omniauth-twitter'
-
 gem 'httparty'
 
 group :test do

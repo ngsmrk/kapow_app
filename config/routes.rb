@@ -1,8 +1,5 @@
 Kapow::Application.routes.draw do
   get "home/index"
-  
-  match '/auth/:provider/callback', :to => 'sessions#create'  
-  match '/auth/failure', :to => 'sessions#failed'  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
