@@ -1,22 +1,24 @@
 class ComixScraper
     include HTTParty
 
-    def initialize(base_uri)
-      @base_uri = base_uri
+    def initialize(base_url)
+      @base_url = base_url
     end
     
     def get_new_releases
-      get_data("http://www.previewsworld.com/shipping/newreleases.txt")
+      get_data("/shipping/newreleases.txt")
     end    
     
     def get_upcoming_releases
-      get_data("http://www.previewsworld.com/shipping/upcomingreleases.txt")
+      get_data("/shipping/upcomingreleases.txt")
     end   
     
     private 
     
     def get_data(url)
-      data = self.class.get(url)      
+      full_url = "#{@base_url}#{url}" 
+      puts full_url
+      data = self.class.get(full_url)      
       data.dump.split('\r\n')
     end 
 end
