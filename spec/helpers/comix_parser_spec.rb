@@ -16,8 +16,8 @@ describe 'ComixParser' do
       @parser.shipping_date.to_date.should == DateTime.strptime('30/05/2012', '%d/%m/%Y')   
     end
 
-    it 'it can find the subsections' do
-      @parser.subsections.should   =~ ["COMICS", "DARK HORSE COMICS", "DC COMICS", "IDW PUBLISHING", "IMAGE COMICS", "MAGAZINES", "MARVEL COMICS", "MERCHANDISE"]            
+    it 'it can find the categories' do
+      @parser.categories.should   =~ ["COMICS", "DARK HORSE COMICS", "DC COMICS", "IDW PUBLISHING", "IMAGE COMICS", "MAGAZINES", "MARVEL COMICS", "MERCHANDISE"]            
     end
 
     it 'it can extract specific publication details' do

@@ -1,12 +1,12 @@
 class ComixParser
 
-  SUBSECTIONS = ['DARK HORSE COMICS', 'DC COMICS','IDW PUBLISHING','IMAGE COMICS','MARVEL COMICS','COMICS','MAGAZINES','MERCHANDISE']
+  CATEGORIES = ['DARK HORSE COMICS', 'DC COMICS','IDW PUBLISHING','IMAGE COMICS','MARVEL COMICS','COMICS','MAGAZINES','MERCHANDISE']
 
-  attr_reader :shipping_date, :subsections, :comix
+  attr_reader :shipping_date, :categories, :comix
 
   def initialize(data)
     @data = data
-    @subsections = []
+    @categories = []
     @comix = []
   end  
 
@@ -16,7 +16,7 @@ class ComixParser
     @data.each_with_index { | value, index |
       #puts "Line #{index}: #{value}"
       
-      @subsections << value && current_section = value if SUBSECTIONS.include?value
+      @categories << value && current_section = value if CATEGORIES.include?value
       
       values = value.split('\t')
       id = values[0]
