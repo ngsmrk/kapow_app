@@ -13,7 +13,7 @@ describe 'ComixParser' do
     end
 
     it 'it can find the shipping date' do
-      @parser.shipping_date.to_date.should == DateTime.now.to_date   
+      @parser.shipping_date.to_date.should == DateTime.strptime('30/05/2012', '%d/%m/%Y')   
     end
     
     it 'it can find the subsection handings' do
