@@ -14,7 +14,9 @@ class ComixParser
  
     current_section = ""
     @data.each_with_index { | value, index |
-      #puts "Line #{index}: #{value}"
+      puts "Line #{index}: #{value}"
+      
+      next if value.blank?
       
       @categories << value && current_section = value if CATEGORIES.include?value
       
