@@ -12,6 +12,7 @@ class ComixParser
 
   def parse
  
+    current_section = ""
     @data.each_with_index { | value, index |
       #puts "Line #{index}: #{value}"
       

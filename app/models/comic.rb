@@ -1,20 +1,20 @@
 class Comic
   
-  attr_reader :publisher, :id, :title, :rrp
+  attr_reader :category, :id, :title, :rrp
   
-  def initialize(publisher, id, title, rrp)
-    @publisher = publisher
+  def initialize(category, id, title, rrp)
+    @category = category
     @id = id
     @title = title
     @rrp = rrp        
   end
   
   def to_s
-    puts "Comic: #{@title}"
+    puts "#{@category} : #{@title}"
   end
   
   def == (other)
-    other.id == self.id && other.title == self.title && other.rrp == self.rrp
+    other.category == self.category && other.id == self.id && other.title == self.title && other.rrp == self.rrp
   end
   
 end
