@@ -9,7 +9,7 @@ describe 'ComixParser' do
 
       # new_releases = ComixScraper.new('http://www.previewsworld.com/').get_new_releases    
       @parser = ComixParser.new(new_releases)
-      @parser.parse       
+      @parser.parse
     end
 
     it 'it can find the shipping date' do
