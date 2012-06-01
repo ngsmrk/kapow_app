@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:ngsmrk/kapow.git
+  revision: 74e9bd73631d7050aa725c90f5f2dabf5c9dca70
+  specs:
+    kapow (0.0.1)
+      httparty (>= 0.8.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -196,8 +203,8 @@ DEPENDENCIES
   factory_girl_rails
   faker
   heroku
-  httparty
   jquery-rails
+  kapow!
   pg
   rails (= 3.2.3)
   rspec-rails

@@ -24,7 +24,7 @@ gem 'thin'
 
 gem 'heroku'
 
-gem 'httparty'
+gem 'kapow', :git => 'git@github.com:ngsmrk/kapow.git'
 
 group :test do
 	gem 'cucumber'
