@@ -14,7 +14,11 @@ describe ReleasesController do
     
     it "should render the new template" do
       response.should render_template("new")
-    end    
+    end   
+    
+    it 'has the list of new releases' do
+      assigns(:releases).should_not be_nil 
+    end 
   end
 
   describe "GET 'upcoming'" do
@@ -29,7 +33,11 @@ describe ReleasesController do
     
     it "should render the upcoming template" do
       response.should render_template("upcoming")
-    end    
+    end  
+    
+    it 'has the list of upcoming releases' do
+      assigns(:releases).should_not be_nil 
+    end      
   end
 
 end
