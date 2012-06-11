@@ -6,12 +6,12 @@ so I can buy them ASAP
 
 ### TODO
 
-Scrape content from site (record tests using VCR)
-
-Parse (chuck into mongo??)
+Display new releases and upcoming releases
 
 Add search
 
 Define preferences
 
 Alert (email, SMS, push)
+
+Build graph (neo ??)

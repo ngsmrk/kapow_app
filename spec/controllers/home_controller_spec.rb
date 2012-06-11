@@ -8,10 +8,10 @@ describe HomeController do
       response.should be_success
     end
     
-    it "should render the index" do
+    it "should render the index template" do
       get 'index'
       response.should render_template("index")
-    end    
+    end
   end
 
 end
