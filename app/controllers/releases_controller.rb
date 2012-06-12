@@ -13,7 +13,7 @@ class ReleasesController < ApplicationController
   private
   
   def init_scraper
-    @scraper = Kapow::ComixScraper.new('http://www.previewsworld.com/')     
+    @scraper = Kapow::ComixScraper.new('http://www.previewsworld.com/')
   end
   
 end
