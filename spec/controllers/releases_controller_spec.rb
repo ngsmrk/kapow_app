@@ -5,14 +5,11 @@ describe ReleasesController do
   describe "GET 'new'" do
     
     before :each do
-      get 'new'
       @scraper = mock(Kapow::ComixScraper)
-      @scraper.should_receive(:get_new_releases).and_return []
-      puts "*** #{@scraper.class} #{@scraper.get_new_releases}"
-      
-      Kapow::ComixScraper.stub!(:new).with(an_instance_of(String)).and_return(@scraper)
-      
-      # Kapow::ComixScraper.should_receive(:new).and_return @scraper
+      @scraper.should_receive(:get_new_releases).and_return []      
+      Kapow::ComixScraper.should_receive(:new).with(an_instance_of(String)).and_return(@scraper)
+
+      get 'new'
     end
     
     it "returns http success" do
@@ -31,6 +28,10 @@ describe ReleasesController do
   describe "GET 'upcoming'" do
     
     before :each do
+      @scraper = mock(Kapow::ComixScraper)
+      @scraper.should_receive(:get_upcoming_releases).and_return []      
+      Kapow::ComixScraper.should_receive(:new).with(an_instance_of(String)).and_return(@scraper)
+            
       get 'upcoming'
     end    
     
