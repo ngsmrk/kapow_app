@@ -1,0 +1,14 @@
+<table class="pretty">
+  <tr>
+    <th>Category</th>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  <% for release in @releases %>
+  <tr>
+    <td><%= release.category %></td>
+    <td><%= release.title %></td>
+    <td><%= release.rrp %></td>
+  </tr>
+  <% end %>
+</table>

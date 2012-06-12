@@ -1,2 +1,3 @@
-<h1>Releases#new</h1>
-<p>Find me in app/views/releases/new.html.erb</p>
+<h1>New Releases for <%= format_date_time @shipping_date %></h1>
+
+<%= render :partial => "releases", :locals => {:releases => @releases } %>
