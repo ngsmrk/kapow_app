@@ -1,8 +1,8 @@
 GIT
   remote: git@github.com:ngsmrk/kapow.git
-  revision: 74e9bd73631d7050aa725c90f5f2dabf5c9dca70
+  revision: dc7a8cef0ae5e86b6ace8dd7eba13c4817be42d7
   specs:
-    kapow (0.0.1)
+    kapow (0.0.2)
       httparty (>= 0.8.3)
 
 GEM
@@ -109,7 +109,7 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.7.1)
     mime-types (1.18)
-    multi_json (1.3.5)
+    multi_json (1.3.6)
     multi_xml (0.5.1)
     netrc (0.7.1)
     nokogiri (1.5.2)
@@ -211,7 +211,7 @@ DEPENDENCIES
   faker
   heroku
   jquery-rails
-  kapow!
+  kapow (>= 0.0.2)!
   pg
   pry
   rails (= 3.2.3)

@@ -6,7 +6,7 @@ describe ReleasesController do
     
     before :each do
       init_mocks
-      @scraper.should_receive(:get_new_releases).and_return []
+      @scraper.should_receive(:get_new_releases).and_return @release_data
 
       get 'new'
     end
@@ -29,7 +29,7 @@ describe ReleasesController do
     
     before :each do
       init_mocks
-      @scraper.should_receive(:get_upcoming_releases).and_return []
+      @scraper.should_receive(:get_upcoming_releases).and_return @release_data
             
       get 'upcoming'
     end    
@@ -52,12 +52,9 @@ describe ReleasesController do
     @scraper = mock(Kapow::ComixScraper)
     Kapow::ComixScraper.should_receive(:new).with(an_instance_of(String)).and_return(@scraper)
     
-    @parser = mock(Kapow::ComixParser)
-    @parser.should_receive(:parse)
-    @parser.should_receive(:comix).and_return([])
-    @parser.should_receive(:shipping_date).and_return(DateTime.now)
-            
-    Kapow::ComixParser.should_receive(:new).with(an_instance_of(Array)).and_return(@parser)    
+    @release_data = mock(Kapow::ReleaseData)
+    @release_data.should_receive(:comix).and_return [mock(Kapow::Comic)]
+    @release_data.should_receive(:shipping_date).and_return DateTime.now
   end
 
 end

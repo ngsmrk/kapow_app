@@ -3,19 +3,15 @@ class ReleasesController < ApplicationController
   before_filter :init_scraper
   
   def new
-    data = @scraper.get_new_releases
-    @parser = Kapow::ComixParser.new(data)
-    @parser.parse
-    @releases = @parser.comix
-    @shipping_date = @parser.shipping_date
+    release_data = @scraper.get_new_releases
+    @releases = release_data.comix
+    @shipping_date = release_data.shipping_date
   end
 
   def upcoming
-    data = @scraper.get_upcoming_releases
-    @parser = Kapow::ComixParser.new(data)
-    @parser.parse
-    @releases = @parser.comix
-    @shipping_date = @parser.shipping_date
+    release_data = @scraper.get_upcoming_releases
+    @releases = release_data.comix
+    @shipping_date = release_data.shipping_date
   end
   
   private
