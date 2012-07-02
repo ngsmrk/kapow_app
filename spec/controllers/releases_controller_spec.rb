@@ -49,11 +49,11 @@ describe ReleasesController do
   end
   
   def init_mocks
-    @scraper = mock(Kapow::ComixScraper)
-    Kapow::ComixScraper.should_receive(:new).with(an_instance_of(String)).and_return(@scraper)
+    @scraper = mock(ComixScraper::Scraper)
+    ComixScraper::Scraper.should_receive(:new).and_return(@scraper)
     
-    @release_data = mock(Kapow::ReleaseData)
-    @release_data.should_receive(:comix).and_return [mock(Kapow::Comic)]
+    @release_data = mock(ComixScraper::ReleaseData)
+    @release_data.should_receive(:comix).and_return [mock(ComixScraper::Comic)]
     @release_data.should_receive(:shipping_date).and_return DateTime.now
   end
 
