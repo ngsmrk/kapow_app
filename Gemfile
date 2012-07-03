@@ -27,6 +27,7 @@ gem 'thin'
 gem 'heroku'
 
 gem 'comix_scraper'
+gem 'version_view', :path => '../version_view'
 
 group :test do
 	gem 'cucumber'
