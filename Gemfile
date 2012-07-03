@@ -27,7 +27,10 @@ gem 'thin'
 gem 'heroku'
 
 gem 'comix_scraper'
-gem 'version_view', :path => '../version_view'
+gem 'version_view', '>= 1.0.0'
+
+# in development use local version like so
+# gem 'version_view', :path => '../version_view'
 
 group :test do
 	gem 'cucumber'
