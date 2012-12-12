@@ -21,6 +21,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'compass-rails'
+gem 'zurb-foundation'
 
 gem 'thin'
 
