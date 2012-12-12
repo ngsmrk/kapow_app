@@ -1,3 +1,10 @@
-<h1>Options</h1>
-<p><%= link_to "New", releases_new_path %></p>
-<p><%= link_to "Upcoming", releases_upcoming_path %></p>
+<ul class="nav-bar">
+	<li class="has-flyout">
+		<a href="#" class="main">Options</a>
+		<a href="#" class="flyout-toggle"><span></span></a>
+		<div class="flyout small">
+			<p><%= link_to "New", releases_new_path %></p>
+			<p><%= link_to "Upcoming", releases_upcoming_path %></p>
+		</div>
+	</li>
+</ul>
