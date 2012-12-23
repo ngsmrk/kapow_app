@@ -6,6 +6,7 @@ gem 'pry'
 
 group :development, :test do 
   gem 'sqlite3'
+  gem 'brakeman'
 end
 
 group :production do 
